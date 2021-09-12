@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" className="css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Node News</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">Node.js News</div>
+      <%- include('./partials/search.ejs') %>
+    </header>
+    <div class="wrapper">
+      <div class="news-single">
+        <a class="back" href="/">&larr;- Back to home</a>
+        <% if(article != null) { %>
+        <h2><%- article.title.rendered %></h2>
+        <p><%- article.content.rendered %></p>
+        <% } else{ %> No post found <% } %>
+      </div>
+    </div>
+  </body>
+</html>
